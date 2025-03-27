@@ -57,7 +57,7 @@ public class AgendaEventos {
         LocalDate dataLocal = LocalDate.now();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
 
-        Map<LocalDate, Evento> agendaEventosTreeMap = new TreeMap<>(agendaEventos);
+        Map<LocalDate, Evento> agendaEventosTreeMap = new TreeMap<>(agendaEventos);        
         if (!agendaEventosTreeMap.isEmpty()) {
             for (Map.Entry<LocalDate, Evento> entry : agendaEventosTreeMap.entrySet()) {
                 if(entry.getKey().isEqual(dataLocal) || entry.getKey().isAfter(dataLocal)){
